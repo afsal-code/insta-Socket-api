@@ -88,7 +88,7 @@ try {
         <label htmlFor="phone">Phone:</label>
         <input type="text" name="phone" id="phone" onChange={handleChange} />
         <button onClick={handleSubmit}>Submit</button>
-        <p>          already you have an account? <span>Login</span>
+        <p>          already you have an account?  
 
         <Link to={"/signin"}>signin</Link>
         </p>

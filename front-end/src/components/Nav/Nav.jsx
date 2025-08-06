@@ -93,7 +93,7 @@ navigate('/signin')
               <a href="#services" onClick={() => setMobileMenuOpen(false)}>Services</a>
             </li>
             <li>
-              <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+              <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contacts</a>
             </li>
           </ul>
         </div>

@@ -1,12 +1,13 @@
  import React, { useState } from 'react';
 import './Home.scss';
+import { useNavigate } from 'react-router-dom';
  
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
  
   const handleOpenModal = () => setShowModal(true);
-  const handleCloseModal = () => setShowModal(false);
- 
+    const handleCloseModal = () => setShowModal(false);
+  const navigate = useNavigate();
   return (
     <div className="home-container">
       <main className="container">
@@ -21,8 +22,8 @@ export default function Home() {
             <input type="file" accept="image/*" />
             <textarea placeholder="Write a caption..." />
             <div className="modal-buttons">
-              <button className="close-btn" onClick={handleCloseModal}>Close</button>
-              <button className="post-btn">Post</button>
+              {navigate('/list')}
+              
             </div>
           </div>
         </div>

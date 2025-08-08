@@ -5,7 +5,7 @@ import axios from 'axios';
 import route from "../route";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
- 
+
 function Signup() {
   const [user, setUser] = useState({
     email: "",
@@ -35,21 +35,21 @@ function Signup() {
       };
     });
   }
-  const handleSubmit =async(e)=>{
-e.preventDefault()
-try {
-    const{data,staus}= await axios.post(`${route()}signup`,user)
-    if (staus === 201){
-        alert (data.msg)
-        navigate('/signin')
-    }
-    else{
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const { data, staus } = await axios.post(`${route()}signup`, user)
+      if (staus === 201) {
         alert(data.msg)
+        navigate('/signin')
+       }
+      else {
+        alert(data.msg)
+      }
+    } catch (error) {
+      console.log("error ocuured", error);
+
     }
-} catch (error) {
-    console.log("error ocuured",error);
- 
-}
   }
   return (
     <>
@@ -88,13 +88,13 @@ try {
         <label htmlFor="phone">Phone:</label>
         <input type="text" name="phone" id="phone" onChange={handleChange} />
         <button onClick={handleSubmit}>Submit</button>
-        <p>          already you have an account?  
+        <p>          already you have an account?
 
-        <Link to={"/signin"}>signin</Link>
+          <Link to={"/signin"}>signin</Link>
         </p>
       </form>
     </>
   );
 }
- 
+
 export default Signup;

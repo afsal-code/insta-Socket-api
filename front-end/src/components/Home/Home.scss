@@ -101,24 +101,7 @@
         cursor: pointer;
         transition: all 0.3s ease;
     }
- 
-    .close-btn {
-        background-color: #e74c3c;
-        color: white;
- 
-        &:hover {
-            background-color: #c0392b;
-        }
-    }
- 
-    .post-btn {
-        background-color: #2ecc71;
-        color: white;
- 
-        &:hover {
-            background-color: #27ae60;
-        }
-    }
+  
 }
  
 /* Responsive adjustments */
